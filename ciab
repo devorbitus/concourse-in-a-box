@@ -9,7 +9,7 @@ tsa_key=$workdir/tsa-key
 worker_key=$workdir/worker-key
 http_proxy=http://str-www-proxy2-qa.homedepot.com:8080
 https_proxy=http://str-www-proxy2-qa.homedepot.com:8080
-no_proxy=127.0.0.1|localhost
+no_proxy="127.0.0.1,localhost"
 
 sudo mkdir -p $workdir
 sudo chown $(whoami) $workdir
