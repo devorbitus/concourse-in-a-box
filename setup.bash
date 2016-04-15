@@ -21,7 +21,9 @@ host    all             all             127.0.0.1/32            trust
 host    all             all             ::1/128                 trust
 EOF
 
-wget https://github.com/concourse/concourse/releases/download/v1.1.0/concourse_linux_amd64
+if [ ! -z ./concourse_linux_amd64 ]; then
+  wget https://github.com/concourse/concourse/releases/download/v1.1.0/concourse_linux_amd64
+fi
 sudo install --owner=root --group=root --mode=744 concourse_linux_amd64 /usr/local/sbin/concourse
 sudo install --owner=root --group=root --mode=744 ciab /usr/local/sbin/ciab
 
